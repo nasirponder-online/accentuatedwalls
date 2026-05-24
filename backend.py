@@ -36,7 +36,7 @@ def submit_form():
     )
 
     requests.post("https://textbelt.com/text", {
-        "phone": 5855209798,
+        "phone": phone,
         "message": sms_text_user,
         "key": TEXTBELT_API_KEY
     })
