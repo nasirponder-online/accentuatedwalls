@@ -13,30 +13,36 @@
     </nav>
     <div class="container container-one">
         <div class="text">
-            <span>modern walls. | timeless spaces.</span>
-            <h1>Walls Designed To <em style="color: #2d442de1; font-weight: 500;">Transform</em> Your Space.</h1>
-            <p style="color: rgba(0, 0, 0, 0.291)">────୨ৎ────</p>
-            <p>Modern accent walls & interior painting crafted to</br> bring depth, warmth, and character to your home.</p>
-            <button class="button1" ><a href="#getQoute" style="color: white;">get a free quote</a></button>
+            <span>modern walls | timeless spaces.</span>
+            <h1>Walls Designed To <em style="color:#2d442de1;font-weight: 500;">Transform</em> Your Space.</h1>
+            <span>────୨ৎ────</span>
+            <p>Modern accent walls & interior painting crafted to </br>bring depth, warmth, and character to your home.</p>
+            <a href="#getQoute"><button>get a free qoute</button></a>
+            <div class="information">
+                <div style="border-left: none;">
+                    <img src="{{ url_for('static', filename='star.png') }}" alt="">
+                    <span>5.0 rating</span>
+                </div>
+                <div>
+                    <img src="{{ url_for('static', filename='location.png') }}" alt="">
+                    <span>serving in Georgia</span>
+                </div>
+                <div>
+                    <img src="{{ url_for('static', filename='clock.png') }}" alt="">
+                    <span>1-2 day installs</span>
+                </div>
+            </div>
         </div>
         <div class="image">
             <img src="{{ url_for('static', filename='background_image.jpg') }}" alt="">
         </div>
     </div>
-    <div class="container-two">
-        <div style="border-left: transparent;">
-            <span>custom designs</span>
-            <p>tailored to your style and space.</p>
-        </div>  
-        <div>
-            <span>modern finishes</span>
-            <p>clean details. quality materials.</p>
-        </div>
-        <div>
-            <span>serving in GA & TN</span>
-            <p>serving homes across GA & TN.</p>
-        </div>
+    <div class="divider">────୨ৎ────</div>
+    <div class="container container-two">
+        <h1>About us</h1>
+        <p>At Accentuated walls, we believe a home should feel warm, peaceful, and personal. What started as a simple vision became a passion for transforming plain walls into spaces that bring comfort, emotion, and life into a room. We don’t just create accent walls — we create spaces that feel welcoming, calming, and truly like home. Our goal is to help turn ordinary rooms into places where memories are made, where families gather, and where people can feel at peace after a long day. Inspired by modern, minimal, and natural designs, we focus on creating clean and meaningful spaces with quality work, creativity, and care behind every project.</p>
     </div>
+    <div class="divider">────୨ৎ────</div>
     <div class="container-three">
         <img id="img1" src="{{ url_for('static', filename='1.jpg') }}" alt="">
         <img id="img2" src="{{ url_for('static', filename='2.jpg') }}" alt="">
@@ -45,54 +51,79 @@
         <img id="img6" src="{{ url_for('static', filename='6.jpg') }}" alt="">
         <img id="img9" src="{{ url_for('static', filename='9.jpg') }}" alt="">
     </div>
+    <div class="divider">────୨ৎ────</div>
     <div class="container-four">
-        <div class="box">
-            <div class="tag" style="background-color: transparent;">&nbsp</div>
-            <h1>Basic</h1>
-            <span>starting at</span>
-            <h1>$399</h1>
-            <div class="line"></div>
-            <div class="items">
-                <p>✓ Custom accent wall</p>
-                <p>✓ Professional paint finish</p>
-                <p>✓ Surface prep included</p>
-                <p>✓ 1-day turnaround</p>
-                <p>✓ Clean modern design</p>
+        <h1>services</h1>
+        <div class="services">
+            <div class="box">
+                <div class="tag" style="background-color: transparent;">&nbsp</div>
+                <h1>Basic</h1>
+                <span>starting at</span>
+                <h1>$300</h1>
+                <div class="line"></div>
+                <div class="items">
+                    <p>✓ Modern painted wall design</p>
+                    <p>✓ Single color finish</p>
+                    <p>✓ Clean minimal aesthetic</p>
+                    <p>✓ Standard wall sizes</p>
+                    <p>✓ Smooth professional finish</p>
+                    <p>✓ Perfect for bedrooms, offices, and small spaces</p>
+                </div>
+                <a href="#getQoute"><button>get a qoute</button></a>
             </div>
-            <button><a href="#getQoute">get quote</a></button>
-        </div>
-        <div class="box middle-box">
-            <div class="tag">most popular</div>
-            <h1>Essential</h1>
-            <span>most projects</span>
-            <h1>$699-$1,200</h1>
-            <div class="line"></div>
-            <div class="items">
-                <p>✓ Advanced wall design</p>
-                <p>✓ Full room repaint</p>
-                <p>✓ Trim touch-ups</p>
-                <p>✓ Furniture Assistance</p>
-                <p>✓ Premium finish</p>
+            <div class="box middle-box">
+                <div class="tag">most popular</div>
+                <h1>Signature</h1>
+                <span>most projects</span>
+                <h1>$450-$700</h1>
+                <div class="line"></div>
+                <div class="items">
+                    <p>✓ Advanced wall design</p>
+                    <p>✓ Custom painted wall patterns</p>
+                    <p>✓ Feature wall styling</p>
+                    <p>✓ Detailed line work</p>
+                    <p>✓ Modern geometric aesthetics</p>
+                    <p>✓ Ideal for living rooms and focal spaces</p>
+                </div>
+                <a href="#getQoute"><button>get a qoute</button></a>
             </div>
-            <button><a href="#getQoute" style="color: white;">get quote</a></button>
-        </div>
-        <div class="box">
-            <div class="tag" style="background-color: transparent;">&nbsp</div>
-            <h1>signature</h1>
-            <span>custom qoute</span>
-            <h1>&nbsp</h1>
-            <div class="line"></div>
-            <div class="items">
-                <p>✓ Multi-room upgrades</p>
-                <p>✓ Custom concepts</p>
-                <p>✓ Design consultation</p>
-                <p>✓ Premium detailing</p>
-                <p>✓ Priority scheduling</p>
+            <div class="box">
+                <div class="tag" style="background-color: transparent;">&nbsp</div>
+                <h1>Custom</h1>
+                <span>custom qoute</span>
+                <h1>&nbsp</h1>
+                <div class="line"></div>
+                <div class="items">
+                    <p>✓ Personalized painted concepts</p>
+                    <p>✓ Large wall spaces</p>
+                    <p>✓ Unique geometric layouts</p>
+                    <p>✓ Statement wall designs</p>
+                    <p>✓ High-detail custom work</p>
+                    <p>✓ Luxury-inspired modern finish</p>
+                </div>
+                <a href="#getQoute"><button>get a qoute</button></a>
             </div>
-            <button><a href="#getQoute">get quote</a></button>
+            <div class="box" style="grid-column: 1/4;">
+                <div class="tag" style="background-color: transparent;">&nbsp</div>
+                <h1>Add-ons</h1>
+                <span>custom qoute</span>
+                <h1>&nbsp</h1>
+                <div class="line"></div>
+                <div class="items">
+                    <p>✓ Additional colors</p>
+                    <p>✓ Large wall upgrades</p>
+                    <p>✓ High ceiling walls</p>
+                    <p>✓ Extra prep work</p>
+                    <p>✓ Custom design consultation</p>
+                    <p>✓ Rush scheduling</p>
+                </div>
+                <a href="#getQoute"><button>get a qoute</button></a>
+            </div>
         </div>
     </div>
+    <div class="divider">────୨ৎ────</div>
     <div class="container-five" id="getQoute">
+        <h1>contact us</h1>
         <form action="/submitContactForm" method="post">
             <input type="text" name="firstname" placeholder="First Name" required>
             <input type="text" name="lastname" placeholder="Last Name" required>
