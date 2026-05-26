@@ -9,14 +9,16 @@
     --spanFontColor: #00000053;
     --containerWidth: 90%;
     --containerGap: 25px;
-    --itemSpacing: 12px;
+    --h1FontSize: 45px;
+    --spanFontSize: 12px;
+    --pFontSize: 12px;
 }
 @font-face{
-    font-family: mainFont;
+    font-family: firstFont;
     src: url(Roboto-VariableFont_wdth\,wght.ttf);
 }
 @font-face{
-    font-family: secondaryFont;
+    font-family: secondFont;
     src: url(PlayfairDisplay-VariableFont_wght.ttf);
 }
 @font-face {
@@ -43,33 +45,37 @@ a:hover{
 }
 img{
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
 h1{
-    font-family: secondaryFont;
+    font-family: secondFont;
     font-weight: 100;
     color: var(--carcoal);
+    font-size: var(--h1FontSize);
 }
 p{
-    font-family: mainFont;
+    font-family: firstFont;
     font-weight: 500;
     color: var(--paragraphFontColor);
+    font-size: var(--pFontSize)
 }
 span{
-    font-family: mainFont;
+    font-family: firstFont;
     font-weight: 500;
     color: var(--spanFontColor);
+    font-size: var(--spanFontSize);
 }
 button{
     cursor: pointer;
     padding: 20px 40px;
     letter-spacing: 1px;
-    font-family: mainFont;
+    font-family: firstFont;
     text-transform: uppercase;
     font-weight: 500;
-    color: var(--buttonFontColor);
+    color: var(--carcoal);
+    border-color: var(--carcoal);
+    background-color: transparent;
     transition: .25s ease-in-out;
     border-radius: 5px;
 }
@@ -85,68 +91,90 @@ nav img{
     width: 50px;
     pointer-events: none;
 }
+.divider{
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.131);
+}
 .container{
     width: var(--containerWidth);
-    margin: 0px auto var(--containerGap) auto ;
-    border: solid transparent 1px;
+    margin: auto;
+    padding: 50px 0px;
 }
 .container-one{
     display: flex;
     align-items: center;
-    width: var(--containerWidth);
 }
 .container-one .text{
-    width: 45%;
-    padding: 25px;
     display: grid;
-    gap:15px;
-    justify-items: center;
     text-align: center;
+    width: 45%;
+    gap: 15px;
+    padding: var(--containerGap);
+    justify-items: center;
 }
 .container-one .text span{
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 12px;
 }
 .container-one .text h1{
-    font-size: 45px;
+    display: block;
 }
 .container-one .text p{
-    font-size: 12px;
+    display: block;
 }
 .container-one .text button{
-    background-color: var(--olive);
     border: none;
-    margin-top: 25px;
+    background-color: var(--olive);
+    color: var(--buttonFontColor);
+    margin-top: var(--containerGap);
+}
+.container-one .text .information{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    pointer-events: none;
+    width: 75%;
+    opacity: 0.5;
+    margin-top: var(--containerGap);
+}
+.container-one .text .information div{
+    border-left: solid black 1px;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+.container-one .text .information div img{
+    width: 15px;
+}
+.container-one .text .information div span{
+    font-size: 10px;
+    color: var(--carcoal);
 }
 .container-one .image{
+    display: flex;
     width: 55%;
 }
 .container-one .image img{
+    width: 100%;
     height: 500px;
-    object-fit: cover;
     object-position: top;
 }
 .container-two{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
     width: 90%;
-    padding: 21px 5%;
-    background-color: var(--secondaryBackgroundcolor);
-}
-.container-two div{
+    padding: var(--containerGap) 4%;
     text-align: center;
-    padding: 21px;
-    border-left: solid rgba(0, 0, 0, 0.091) 1px;
+    line-height: 25px;
+    font-size: 21px;
 }
-.container-two div span{
-    color: var(--carcoal);
-    text-transform: capitalize;
-}
-.container-two div p{
+.container-two h1{
+    margin-bottom: 25px;
+    font-family: thirdFont;
+    font-size: 900;
     color: var(--spanFontColor);
-    text-transform: capitalize;
-    font-size: 13px;
+}
+.container-two p{
+    color: rgba(0, 0, 0, 0.428);
 }
 .container-three{
     display: grid;
@@ -157,6 +185,9 @@ nav img{
     gap: 21px;
     padding: 0px 5%;
     margin: 50px auto;
+}
+.container-three img{
+    height: 100%;
 }
 .container-three #img1{
     grid-column: 1 / 6;
@@ -182,16 +213,23 @@ nav img{
     grid-column: 1 / 6;
     grid-row: 10 / span 4;
 }
-.container-four{
+.container-four h1{
+    margin-bottom: 25px;
+    font-family: thirdFont;
+    font-size: 900;
+    color: var(--spanFontColor);
+    text-align: center;
+    text-transform: capitalize;
+}
+.container-four .services{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     width: 90%;
     padding: 25px 5%;
     gap: 21px;
-    background-color: var(--secondaryBackgroundcolor);
     margin: 50px auto;
 }
-.container-four .box{
+.container-four .services .box{
     border: solid rgba(0, 0, 0, 0.103) 1px;
     text-align: center;
     border-radius: 5px;
@@ -201,8 +239,12 @@ nav img{
     align-items: center;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.143);
     cursor: pointer;
+    transition: .25s ease-in-out;
 }
-.container-four .box .tag{
+.container-four .services .box:hover{
+    box-shadow: 0px 0px 10px 1px rgba(18, 95, 8, 0.508);
+}
+.container-four .services .box .tag{
     position: relative;
     top: -25px;
     text-transform: uppercase;
@@ -212,28 +254,31 @@ nav img{
     padding: 3px 10px;
     color: var(--buttonFontColor);
 }
-.container-four .box span{
+.container-four .services .box span{
     text-transform: uppercase;
     font-size: 12px;
 }
-.container-four .box h1{
+.container-four .services .box h1{
     text-transform: capitalize;
+    color: var(--carcoal);
+    font-family: secondFont;
 }
-.container-four .box .line{
+.container-four .services .box .line{
     width: 90%;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.176);
     height: 1px;
     margin: 20px 0px;
 }
-.container-four .box .items{
+.container-four .services .box .items{
     width: 90%;
     text-align: left;
 }
-.container-four .box .items p{
+.container-four .services .box .items p{
     line-height: 25px;
+    font-size: 13px;
 }
-.container-four .box button{
+.container-four .services .box button{
     border: solid var(--olive) 2px;
     background-color: transparent;
     color: var(--carcoal);
@@ -241,17 +286,25 @@ nav img{
     margin-top: 21px;
     font-size: 12px;
 }
-.container-four .middle-box{
+.container-four .services .middle-box{
     border: solid var(--olive) 2px;
 }
-.container-four .middle-box h1{
+.container-four .services .middle-box h1{
     color: var(--olive);
 }
-.container-four .middle-box button{
+.container-four .services .middle-box button{
     background-color: var(--olive);
     color: var(--buttonFontColor);
     border: none;
     padding: 12px 82px;
+}
+.container-five h1{
+    margin-bottom: 25px;
+    font-family: thirdFont;
+    font-size: 900;
+    color: var(--spanFontColor);
+    text-align: center;
+    text-transform: capitalize;
 }
 .container-five form{
     width: var(--containerWidth);
@@ -284,40 +337,28 @@ footer{
     pointer-events: none;
     font-size: 10px;
 }
-@media(max-width:960px){
+@media(max-width:1000px){
     .container-one{
+        display: flex;
         flex-direction: column;
     }
     .container-one .text{
-        gap: 25px;
-        width: 98%;
-        text-align: center;
-        justify-items: center;
-        margin: 50px 0px 0px 0px;
+        width: 95%;
+    }
+    .container-one .text .information div span{
+        font-size: 8px;
+        color: var(--carcoal);
     }
     .container-one .image{
-        width: 100%;
-    }
-    .container-four{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media(max-width: 750px){
-    .container-two div span{
-        display: none;
-    }
-    .container-two div p{
-        font-size: 10px;
+        width: 95%;
     }
     .container-three{
-        width: var(--containerWidth);
-        margin: auto;
         display: flex;
         flex-direction: column;
-        padding: 50px 0px 0px 0px;
     }
-    .container-four{
-        grid-template-columns: repeat(1,1fr);
+    .container-four .services{
+        display: flex;
+        flex-direction: column;
     }
     .container-five form{
         display: flex;
